@@ -138,8 +138,8 @@ public class MainActivity extends Activity {
         switch (item.getItemId()){
             case 0://删除
                 int delResult = sqLiteDatabase.delete("record", "id=?", new String[]{dataList.get(longClickPosition).getId()+""});//删除数据库数据
-                dataList.remove(longClickPosition);
-                listView.deferNotifyDataSetChanged();//通知界面刷新
+//                dataList.remove(longClickPosition);
+//                listView.deferNotifyDataSetChanged();//通知界面刷新
                 break;
             case 1://修改
                 UpdateDialog updateDialog = new UpdateDialog(MainActivity.this, longClickPosition, dataList.get(longClickPosition));
